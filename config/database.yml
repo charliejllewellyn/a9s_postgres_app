@@ -5,7 +5,6 @@ default: &default
   host: <%= ENV["host"] %>
   username: <%= ENV["username"] %>
   password: <%= ENV["password"] %>
-  database: <%= ENV["name"] %>
 
 development:
   <<: *default
@@ -20,4 +19,4 @@ test:
 
 production:
   <<: *default
-  database: db/a9s_postgres_app_production
+  database: <%= ENV["name"] %>
