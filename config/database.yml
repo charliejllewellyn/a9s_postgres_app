@@ -5,6 +5,7 @@ default: &default
   host: <%= ENV["host"] %>
   username: <%= ENV["username"] %>
   password: <%= ENV["password"] %>
+  database: <%= ENV["name"] %>
 
 development:
   <<: *default
